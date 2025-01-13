@@ -22,9 +22,6 @@ Thumbs.db
 # 로그 파일
 *.log
 
-# 요구 사항 파일 (예: 가상 환경 관련)
-requirements.txt
-
 # 기타 빌드 파일
 build/
 dist/

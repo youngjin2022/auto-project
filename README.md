@@ -10,6 +10,7 @@ pip install -r requirements.txt
 git add .
 git commit -m "커밋 메세지 예) :read: 변경 (#12)"
 git push origin $(git rev-parse --abbrev-ref HEAD)
+-- 브랜치에 올라가지 않는 것 : .venv, tdms
 ```
 
 ## 1. 설정 파일 처리
