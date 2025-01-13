@@ -6,6 +6,7 @@ python -m venv .venv
 pip install -r requirements.txt
 python -V
 올바른 출력 : Python 3.12.0
+config\config.ini 파일 수정 (경로)
 ```
 
 ## 실행 명령어
@@ -18,8 +19,24 @@ python acquisitor.py
 git add .
 git commit -m "커밋 메세지 예) :memo: 변경 (#12)"
 git push origin $(git rev-parse --abbrev-ref HEAD)
-
 -- 브랜치에 올라가지 않는 것 : .venv, tdms
+```
+
+## 도커
+```bash
+docker build -t acquisitor-image .
+docker run -d --name acquisitor-container acquisitor-image
+docker exec -it acquisitor-container bash
+apt-get update
+apt-get install nano
+nano /app/config/config.ini
+[DEFAULT]
+directory = /app/tdms
+channel_data_url = http://localhost:8080/api/channel/data
+channel_names_url = http://localhost:8080/api/channel/names
+
+python /app/acquisitor.py
+수동 실행 가능
 ```
 
 ## 1. 설정 파일 처리
