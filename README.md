@@ -1,8 +1,16 @@
 ## 실행 전 필수 사항
 ```bash
+mkdir tdms
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
+python -V
+올바른 출력 : Python 3.12.0
+```
+
+## 실행 명령어
+```bash
+python acquisitor.py
 ```
 
 ## 수정 및 삭제 시 깃 명령어

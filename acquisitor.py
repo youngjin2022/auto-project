@@ -16,7 +16,7 @@ F_MIN = 5
 F_MAX = 3000
 
 # config 파일의 경로들을 읽는 로직
-config_path = os.getenv('CONFIG_PATH', 'C:/Users/fmtes/Downloads/pythonnew/config/config.ini')
+config_path = os.getenv('CONFIG_PATH', 'config/config.ini')
 if not os.path.exists(config_path):
     raise FileNotFoundError(f"Config file not found: {config_path}")
 config = configparser.ConfigParser()
